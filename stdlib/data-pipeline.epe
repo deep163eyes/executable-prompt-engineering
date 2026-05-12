@@ -1,0 +1,9 @@
+[PROGRAM]
+SKILL: 数据处理管线
+GOAL: 对输入数据进行清洗、转换、聚合后输出
+STEPS: 读取原始数据 → 清洗（去重/补缺/格式统一） → 字段转换 → 聚合计算 → 写入目标
+RULES: 仅用标准库+pandas（如需）、中间结果持久化、输出格式与INPUT一致
+OUTPUT: 处理后的数据文件（CSV/JSON/Parquet）
+INPUT: 数据源路径、处理规则描述
+VERSION: 1.0
+[END]

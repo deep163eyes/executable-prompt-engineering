@@ -1,0 +1,8 @@
+[PROGRAM]
+SKILL: 数据采集
+GOAL: 从指定 URL 获取数据并提取关键信息
+STEPS: HTTP请求 → 解析HTML/JSON → 提取目标字段 → 结构化输出
+RULES: 遵守robots.txt、设置User-Agent、超时15秒、输出JSON或CSV
+OUTPUT: data.json / data.csv
+INPUT: 目标URL、CSS选择器或JSON路径
+[END]

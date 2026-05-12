@@ -1,0 +1,9 @@
+[PROGRAM]
+SKILL: AI对话
+GOAL: 与 AI 进行多轮对话并保留上下文
+STEPS: 初始化系统提示 → 用户输入 → LLM生成回复 → 保存对话历史 → 继续下一轮
+RULES: 不使用工具调用、不执行代码、关注对话质量、保留会话上下文
+OUTPUT: 多轮对话记录
+INPUT: 对话主题、角色设定
+VERSION: 1.0
+[END]

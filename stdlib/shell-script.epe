@@ -1,0 +1,9 @@
+[PROGRAM]
+SKILL: Shell自动化脚本
+GOAL: 生成一个可直接运行的 Shell 脚本完成自动化任务
+STEPS: 确定任务流程 → 编写Shell命令序列 → 添加参数/错误处理 → 保存为可执行文件
+RULES: 仅用POSIX兼容语法、包含set -euo pipefail、包含Usage提示、检查依赖命令
+OUTPUT: *.sh（chmod +x后直接运行）
+INPUT: 自动化任务描述
+VERSION: 1.0
+[END]

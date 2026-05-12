@@ -1,0 +1,8 @@
+[PROGRAM]
+SKILL: PDF报告生成
+GOAL: 根据主题生成专业 PDF 报告（旁门左道风格）
+STEPS: 调研资料 → 结构化分析框架 → 编写HTML+CSS → WeasyPrint渲染
+RULES: 浅色商务风格、深海蓝#1B3A5C配色、文件名约定、先检查weasyprint
+OUTPUT: PDF文件（存至 workspace/report/YYYYMMDD/）
+VERSION: 1.0
+[END]

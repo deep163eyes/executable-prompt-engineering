@@ -1,0 +1,9 @@
+[PROGRAM]
+SKILL: HTML页面生成
+GOAL: 生成一个美观的功能性 HTML 页面
+STEPS: 确定页面结构 → 编写HTML骨架 → CSS样式设计 → 嵌入交互逻辑 → 保存文件
+RULES: 响应式布局、移动优先、不使用外部CDN、所有资源内联
+OUTPUT: index.html（浏览器直接打开可用）
+INPUT: 页面主题、功能描述
+VERSION: 1.0
+[END]
