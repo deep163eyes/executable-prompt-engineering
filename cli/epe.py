@@ -44,6 +44,12 @@ def validate(filepath):
     except ValueError as e:
         return {"valid": False, "errors": [str(e)], "fields": {}}
 
+    # Apply defaults for optional fields
+    DEFAULTS = {"VERSION": "1.0.0", "INPUT": "来自上下文"}
+    for key, val in DEFAULTS.items():
+        if key not in fields or not fields[key]:
+            fields[key] = val
+
     # Check required fields
     for field in PROGRAM_FIELDS:
         if field not in fields or not fields[field]:
