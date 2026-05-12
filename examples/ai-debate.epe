@@ -1,5 +1,5 @@
 [PROGRAM]
-NAME: AI辩论机器人
+SKILL: AI辩论机器人
 GOAL: 生成可编译运行的 C# WinForm 辩论程序
 STEPS: 初始化双方立场 → 正反方轮询 → LLM 生成论点 → 轮次循环 → 最终总结
 RULES: 无设计器文件、无 NuGet 依赖、API 密钥从 .env 读取

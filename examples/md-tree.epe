@@ -1,5 +1,5 @@
 [PROGRAM]
-NAME: md-tree-generator
+SKILL: md-tree-generator
 GOAL: 扫描目录输出带元数据的 Markdown 文件目录树
 STEPS: os.walk扫描 → 过滤.md → 提取大小+修改时间 → 树形排版 → 控制台输出
 RULES: 只用标准库、argparse参数化、树形连接符格式

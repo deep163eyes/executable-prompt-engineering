@@ -23,7 +23,7 @@ Prompt（源码） → Compile（AI编译） → Executable（可执行物） �
 
 ```
 [PROGRAM]
-NAME:   项目名
+SKILL:   项目名
 GOAL:   一句话执行目标
 STEPS:  核心步骤（→连接）
 RULES:  约束条件
@@ -72,7 +72,7 @@ python3 cli/epe.py validate examples/pdf-report.epe  # 验证格式
 ```bash
 cat > my-task.epe << 'EOF'
 [PROGRAM]
-NAME: my-task
+SKILL: my-task
 GOAL: ...
 STEPS: A → B → C
 RULES: ...

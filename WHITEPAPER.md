@@ -24,7 +24,7 @@ Prompt → Compile → Executable → Action
 
 ```
 [PROGRAM]
-NAME:   <项目名>
+SKILL:   <项目名>
 GOAL:   <一句话目标>
 STEPS:  <核心步骤，→ 连接>
 RULES:  <约束条件>

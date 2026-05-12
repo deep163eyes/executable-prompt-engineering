@@ -16,7 +16,7 @@ EPE（Executable Prompt Engineering，可执行提示词工程）是一种将自
 
 ```
 [PROGRAM]
-NAME:   <项目名>
+SKILL:   <项目名>
 GOAL:   <执行目标>
 STEPS:  <核心步骤>
 RULES:  <约束条件>
@@ -85,7 +85,7 @@ OUTPUT: <可执行物>
 ```
 # 行内注释
 [PROGRAM]
-NAME: my-task
+SKILL: my-task
 VERSION: 0.5  ← 不在必填字段顺序中也可以
 GOAL: ...
 ```
@@ -112,7 +112,7 @@ STEPS: |
 
 | 检查项 | 规则 |
 |--------|------|
-| NAME 非空 | 项目名不能为空 |
+| SKILL 非空 | 项目名不能为空 |
 | GOAL 非空 | 必须有明确的执行目标 |
 | STEPS 要求 | 建议 2-7 步，用 → 连接 |
 | RULES 条数 | 至少 2 条 |
@@ -135,7 +135,7 @@ STEPS: |
 
 ```
 [PROGRAM]
-NAME: 行业分析报告生成
+SKILL: 行业分析报告生成
 GOAL: 根据主题生成专业 PDF 分析报告
 STEPS: 调研收集资料 → 结构化分析 → 编写HTML+CSS → WeasyPrint渲染
 RULES: 旁门左道浅色风格、文件名格式{主题}_深瞳1号_{YYYYMMDD}、先检查依赖
@@ -148,7 +148,7 @@ VERSION: 1.1
 
 ```
 [PROGRAM]
-NAME: 网站变更监控脚本
+SKILL: 网站变更监控脚本
 GOAL: 生成可直接运行的 Python 监控脚本
 STEPS: HTTP GET → 计算内容哈希 → 对比上次哈希 → 不一致则发邮件
 RULES: 只用 Python 标准库、敏感信息从 .env 读取
@@ -161,7 +161,7 @@ INPUT: 目标URL、检查间隔秒数、接收邮箱
 
 ```
 [PROGRAM]
-NAME: 每日市场摘要
+SKILL: 每日市场摘要
 GOAL: 每天早上 8 点生成市场摘要并推送到微信
 STEPS: 访问数据源 → 结构化摘要 → 格式化消息 → 微信推送
 RULES: 结果不超过 2000 字、失败后重试 3 次

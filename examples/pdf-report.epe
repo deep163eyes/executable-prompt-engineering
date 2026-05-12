@@ -1,5 +1,5 @@
 [PROGRAM]
-NAME: 行业分析报告生成
+SKILL: 行业分析报告生成
 GOAL: 根据主题生成专业 PDF 分析报告
 STEPS: 调研收集资料 → 结构化分析 → 编写HTML+CSS → WeasyPrint渲染
 RULES: 旁门左道浅色风格、文件名格式{主题}_深瞳1号_{YYYYMMDD}、先检查依赖

@@ -12,7 +12,7 @@ Usage:
 
 import os, sys, re, json, pathlib
 
-PROGRAM_FIELDS = ["NAME", "GOAL", "STEPS", "RULES", "OUTPUT"]
+PROGRAM_FIELDS = ["SKILL", "GOAL", "STEPS", "RULES", "OUTPUT"]
 
 def parse_epe(filepath):
     """Parse a .epe file and return the PROGRAM fields as a dict."""
@@ -56,8 +56,8 @@ def validate(filepath):
             errors.append(f"Missing required field: {field}")
 
     # Check NAME
-    if "NAME" in fields and len(fields["NAME"]) < 2:
-        errors.append("NAME must be at least 2 characters")
+    if "SKILL" in fields and len(fields["SKILL"]) < 2:
+        errors.append("SKILL must be at least 2 characters")
 
     # Check RULES count
     if "RULES" in fields:
