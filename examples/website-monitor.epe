@@ -1,9 +1,7 @@
 [PROGRAM]
 NAME: 网站变更监控脚本
-VERSION: 1.0
-PURPOSE: 生成可直接运行的 Python 网站变更监控脚本
-INPUT: 目标 URL、检查间隔（秒）、接收通知邮箱
-LOGIC: HTTP GET 请求 → 计算页面内容哈希 → 与上次哈希对比 → 不一致则发送邮件通知
-CONSTRAINT: 仅用 Python 标准库（requests 除外）、敏感信息从 .env 读取、哈希持久化到本地文件
+GOAL: 生成可直接运行的 Python 网站变更监控脚本
+STEPS: HTTP GET → 计算页面哈希 → 对比上次哈希 → 不一致则发邮件
+RULES: 仅用标准库、敏感信息从 .env 读取、哈希持久化到本地文件
 OUTPUT: monitor.py + .env.template（python3 monitor.py 即可运行）
 [END]

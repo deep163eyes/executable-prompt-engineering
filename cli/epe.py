@@ -12,7 +12,7 @@ Usage:
 
 import os, sys, re, json, pathlib
 
-PROGRAM_FIELDS = ["NAME", "VERSION", "PURPOSE", "INPUT", "LOGIC", "CONSTRAINT", "OUTPUT"]
+PROGRAM_FIELDS = ["NAME", "GOAL", "STEPS", "RULES", "OUTPUT"]
 
 def parse_epe(filepath):
     """Parse a .epe file and return the PROGRAM fields as a dict."""
@@ -53,17 +53,17 @@ def validate(filepath):
     if "NAME" in fields and len(fields["NAME"]) < 2:
         errors.append("NAME must be at least 2 characters")
 
-    # Check CONSTRAINT count
-    if "CONSTRAINT" in fields:
-        count = len([c for c in fields["CONSTRAINT"].split("、") if c.strip()])
+    # Check RULES count
+    if "RULES" in fields:
+        count = len([c for c in fields["RULES"].split("、") if c.strip()])
         if count < 2:
-            errors.append(f"CONSTRAINT must have at least 2 rules (found {count})")
+            errors.append(f"RULES must have at least 2 rules (found {count})")
 
-    # Check LOGIC steps
-    if "LOGIC" in fields:
-        steps = fields["LOGIC"].count("→") + 1
+    # Check STEPS steps
+    if "STEPS" in fields:
+        steps = fields["STEPS"].count("→") + 1
         if steps < 3:
-            errors.append(f"LOGIC should have at least 3 steps (found {steps})")
+            errors.append(f"STEPS should have at least 3 steps (found {steps})")
 
     return {
         "valid": len(errors) == 0,
@@ -131,8 +131,8 @@ def main():
             print(f"\n{'='*50}")
             print(f"COMPILE PLAN")
             print(f"{'='*50}")
-            purpose = result["fields"].get("PURPOSE", "")
-            logic = result["fields"].get("LOGIC", "")
+            purpose = result["fields"].get("GOAL", "")
+            logic = result["fields"].get("STEPS", "")
             output = result["fields"].get("OUTPUT", "")
 
             print(f"  Target:      {purpose}")
@@ -144,8 +144,8 @@ def main():
             for i, step in enumerate(steps, 1):
                 print(f"    [{i}] {step}")
 
-            print(f"\n  Constraints to enforce:")
-            for c in result["fields"].get("CONSTRAINT", "").split("、"):
+            print(f"\n  Rules to enforce:")
+            for c in result["fields"].get("RULES", "").split("、"):
                 if c.strip():
                     print(f"    ⚠  {c.strip()}")
 
